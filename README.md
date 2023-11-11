@@ -12,13 +12,17 @@ JavaScript basics to write tests in Postman
 
 # Vaiables
 
-are equal
+1) ways to declare a variable. CamleCase or SnakeCase  :
 
-var  firstName = 'Ira';
-let lastName = "Han";
-let age = 20;
-let email;
-console.log(firstName, age, email);
+- var  firstName = 'Ira';
+- let lastName = "Han";
+- let age = 20;
+- let email;
+- console.log(firstName, age, email);
+
+2) change content of a variable
+   - firstName = 'Olga';
+   - email = 'olga12@regl.com'.
 
 
 
