@@ -35,7 +35,12 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
      
 3) Constant variable - protect from overriding
 
-   - const webUrl = 'http:....' 
+   - const webUrl = 'http:....'
+
+4) there are GLOBAL and BLOCK scope variables:
+   - global variable can be used in a block
+   - global and block variables can have te same name
+   - inside a block a value of a global variable can be changed but you can not use a block variable in a global scope
   
 # Text template and concatination
 
@@ -44,6 +49,7 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - let fullName = `${firstName} ${lastName}`;
    - let info = `My name is ${firstName} and sirname is ${lastName}`; console.log(info);
    - let infoAge = ` I am ${2023-1990} years old`;
+   - let outlet = '2'; let number = parseInt('2');
   
 # Swap two variables in JavaScript
 - destructuring assignment
