@@ -45,7 +45,21 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - let info = `My name is ${firstName} and sirname is ${lastName}`; console.log(info);
    - let infoAge = ` I am ${2023-1990} years old`;
   
-#
+# Swap two variables in JavaScript
+- destructuring assignment
+  [firstName, lastName] = [lastName, firstName];
+- with temporary variable
+- another 2 ways https://dmitripavlutin.com/swap-variables-javascript/
+
+
+
+
+
+
+
+
+
+
      
 
 
