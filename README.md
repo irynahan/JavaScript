@@ -2,6 +2,7 @@
 
 JavaScript basics to write tests in Postman
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
 https://www.w3schools.com/jsref/jsref_number_nan.asp
 
 # Console
@@ -56,6 +57,20 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
   [firstName, lastName] = [lastName, firstName];
 - with temporary variable
 - another 2 ways https://dmitripavlutin.com/swap-variables-javascript/
+
+# Functions
+
+1) functions definition:
+        function add(a, b) {
+          let sum = a + b;
+          return sum
+        }
+2) arrow functions:
+   const add = (a, b) => a + b;
+   
+3) build-in functions https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+
+
 
 
 
