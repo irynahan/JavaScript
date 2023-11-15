@@ -81,9 +81,17 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
       firstName: 'Ola',
       lastNAme: 'Olala',
       age: 23
-  };
-2) to view object console.log(person), view some object property : console.log(person.age)
-3) in Java script you can add a property to a constant object
+      sayHello: functon () {return 'Hello, my name is  ' + this.firstName;}
+   };
+3) to view object console.log(person), view some object property : console.log(person.age)
+4) in Java script you can add a property to a constant object
+
+# JSON 
+
+1) object to JSON:
+   let json = JSON.stringify(person);
+2) JSON to JavaScript Object:
+   let newPerson = JSON.parse(json);
 
 
 
