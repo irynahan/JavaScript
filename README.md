@@ -4,6 +4,7 @@ JavaScript basics to write tests in Postman
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 https://www.w3schools.com/jsref/jsref_number_nan.asp
+/*     */ comment
 
 # Console
 
@@ -69,6 +70,20 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    const add = (a, b) => a + b;
    
 3) build-in functions https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+   
+4) callback functions:
+   https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+
+# Object in JavaScript
+
+1) create object:
+  const person = {
+      firstName: 'Ola',
+      lastNAme: 'Olala',
+      age: 23
+  };
+2) to view object console.log(person), view some object property : console.log(person.age)
+3) in Java script you can add a property to a constant object
 
 
 
