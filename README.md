@@ -85,6 +85,15 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    };
 3) to view object console.log(person), view some object property : console.log(person.age)
 4) in Java script you can add a property to a constant object
+5) Arrays view some object property:
+   const person1 = {
+      firstName: 'Ola',
+      lastNAme: 'Olala',
+      socialProfiles: [{name: 'Facebook', handle: 'olgA'}, {name: 'Tiktok', handle: 'Olga'}, {name:'Instagram', handle: 'oLga'}]
+   
+   };
+     console.log(person1.socialProfiles[1].name)  ... Tiktok
+    
 
 # JSON 
 
@@ -93,6 +102,17 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 2) JSON to JavaScript Object:
    let newPerson = JSON.parse(json);
 
+# Tests in Postman
+
+1) m.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+2) check response details:
+pm.test('Status is UP', function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.status).to.eql("UP");
+});
 
 
 
