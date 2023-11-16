@@ -1,4 +1,4 @@
-# JavaScript
+# JavaScript + Postman
 
 JavaScript basics to write tests in Postman
 
@@ -86,21 +86,58 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 3) to view object console.log(person), view some object property : console.log(person.age)
 4) in Java script you can add a property to a constant object
 5) Arrays view some object property:
+   - console.log(person1.socialProfiles[1].name)
    const person1 = {
       firstName: 'Ola',
       lastNAme: 'Olala',
       socialProfiles: [{name: 'Facebook', handle: 'olgA'}, {name: 'Tiktok', handle: 'Olga'}, {name:'Instagram', handle: 'oLga'}]
    
    };
-     console.log(person1.socialProfiles[1].name)  ... Tiktok
+   !!!... Tiktok
     
-
 # JSON 
 
 1) object to JSON:
    let json = JSON.stringify(person);
 2) JSON to JavaScript Object:
    let newPerson = JSON.parse(json);
+3) Navigate through JSON
+   - const firstPostalCode = response[0].Item01.Data[0].Results[0].Contact.Address.PostalCode;
+[
+    {
+        "Item01": {
+            "MetaInfo": {
+                "Timestamp": "2023-02-16T08:15:21.000+0000"
+            },
+            "Data": [
+                {
+                    "_type": "SearchResultsContact",
+                    "DataId": 1987,
+                    "Results": [
+                        {
+                            "Relevance": 0.5,
+                            "Contact": {
+                                "Name": "John Doe",
+                                "Phone": "+1-555-123-4567",
+                                "Email": "johndoe@email.com",
+                                "Address": {
+                                    "Street": "123 Main St",
+                                    "City": "Anytown",
+                                    "State": "CA",
+                                    "PostalCode": "12345"
+                                },
+                                "Active": true,
+                                "Notes": "New customer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]
+
+   
 
 # Tests in Postman
 
