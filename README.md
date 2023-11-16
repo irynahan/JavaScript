@@ -85,7 +85,9 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    };
 3) to view object console.log(person), view some object property : console.log(person.age)
 4) in Java script you can add a property to a constant object
-5) Arrays view some object property:
+# Arrays []
+- methods: push (add to the end value and returns length), length (arrays size), pop (delete last und returns its value), shift (delete first und returns value), etc
+- view some object property from Array:
    - console.log(person1.socialProfiles[1].name)
    const person1 = {
       firstName: 'Ola',
