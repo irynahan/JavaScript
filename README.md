@@ -54,6 +54,7 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - let outlet = '2'; let number = parseInt('2');
   
 # Swap two variables in JavaScript
+
 - destructuring assignment
   [firstName, lastName] = [lastName, firstName];
 - with temporary variable
@@ -85,7 +86,9 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    };
 3) to view object console.log(person), view some object property : console.log(person.age)
 4) in Java script you can add a property to a constant object
+   
 # Arrays []
+
 - methods: push (add to the end value and returns length), length (arrays size), pop (delete last und returns its value), shift (delete first und returns value), etc
 - view some object property from Array:
    - console.log(person1.socialProfiles[1].name)
@@ -152,6 +155,17 @@ pm.test('Status is UP', function () {
     var jsonData = pm.response.json();
     pm.expect(jsonData.status).to.eql("UP");
 });
+
+3) pm.test("Check product is in stock", () => {
+    const resp = pm.response.json();
+    pm.expect(resp.inStock).to.be.true;
+})
+
+4) pm.test("Check price", () => {
+    const resp = pm.response.json();
+    pm.expect(resp.price).to.be.a('number');
+    pm.expect(resp.price).to.be.above(0);
+})
 
 
 
