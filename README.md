@@ -15,7 +15,7 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 # Comments
 // and goes comment
 
-# Vaiables
+# Variables
 
 - case sensitive
 - CamleCase or SnakeCase
@@ -43,6 +43,9 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - global variable can be used in a block
    - global and block variables can have te same name
    - inside a block a value of a global variable can be changed but you can not use a block variable in a global scope
+  
+5) Setting Postman variables from scripts:
+   - pm.collectionVariables.set('key', value);
   
 # Text template and concatination
 
