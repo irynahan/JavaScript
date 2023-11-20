@@ -152,7 +152,7 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 
 2) check response details:
 pm.test('Status is UP', function () {
-    var jsonData = pm.response.json();
+    const jsonData = pm.response.json();
     pm.expect(jsonData.status).to.eql("UP");
 });
 
@@ -167,7 +167,11 @@ pm.test('Status is UP', function () {
     pm.expect(resp.price).to.be.above(0);
 })
 
-
+5) const resp = pm.response.json();
+pm.test("Error message", () => {
+    pm.expect(resp.error).to.have.string("Invalid value");
+    pm.expect(resp.error).to.contain("Invalid value");
+})
 
 
 
