@@ -45,7 +45,25 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - inside a block a value of a global variable can be changed but you can not use a block variable in a global scope
   
 5) Setting Postman variables from scripts:
+   
    - pm.collectionVariables.set('key', value);
+   
+   - to set a collections property we have to be sure, that it has an expected value:
+     
+   pm.test('At list one product ID exists', () => {
+      const resp = pm.response.json();
+      pm.expect(resp).to.be.an('array');
+      pm.expect(resp.length).to.be.above(0);
+
+      const product = resp[0];
+
+      pm.expect(product).to.be.an('object');
+      pm.expect(product).to.haveOwnProperty('id');
+      pm.expect(product.id).to.be.a('number');
+      pm.expect(product).haveOwnProperty('inStock');
+      pm.expect(product.inStock).is.true;
+      pm.collectionVariables.set('productId', resp[2].id);
+})
   
 # Text template and concatination
 
