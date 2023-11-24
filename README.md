@@ -36,7 +36,6 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - email = 'olga12@regl.com'
      
 3) Constant variable - protect from overriding
-
    - const webUrl = 'http:....'
 
 4) there are GLOBAL and BLOCK scope variables:
@@ -45,9 +44,8 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    - inside a block a value of a global variable can be changed but you can not use a block variable in a global scope
   
 5) Setting Postman variables from scripts:
-   
+
    - pm.collectionVariables.set('key', value);
-   
    - to set a collections property we have to be sure, that it has an expected value:
      
    pm.test('At list one product ID exists', () => {
@@ -63,8 +61,17 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
       pm.expect(product).haveOwnProperty('inStock');
       pm.expect(product.inStock).is.true;
       pm.collectionVariables.set('productId', resp[2].id);
+
 })
-  
+
+# Getting variables in script
+  -  pm.collectionVariables.get('productId')
+  -  use in test:
+     pm.test('Correct product were retrieved', () => {
+    const requestedProductId = pm.collectionVariables.get('productId')
+    pm.expect(resp.id).equal(requestedProductId);
+});
+
 # Text template and concatination
 
    - fullName = firstName + lastName;
