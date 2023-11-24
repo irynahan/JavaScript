@@ -118,6 +118,12 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
    
 # Arrays []
 
+- for loop for Array:
+  let number = [1,3,5,7,9]
+
+  for (let i = 0; i<number.length; i++){
+     console.log(number[i]);
+  }
 - methods: push (add to the end value and returns length), length (arrays size), pop (delete last und returns its value), shift (delete first und returns value), etc
 - view some object property from Array:
    - console.log(person1.socialProfiles[1].name)
