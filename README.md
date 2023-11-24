@@ -13,6 +13,7 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 - case sensitive
   
 # Comments
+=== compare value and value type '20' === 20 , 20 === 20
 // and goes comment
 
 # Variables
