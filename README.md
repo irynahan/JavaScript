@@ -150,7 +150,28 @@ function findSeniorEmployees(employees, currentYear) {
     });
     pm.expect(isOrderIdInResponse).to.be.true;
 })
-  
+
+- find function in Array:
+  const personMary = persons.find((person) => person.name === "Mary");
+  console.log (personMary.email);
+  const persons = [
+{
+    name:'Jake',
+    email: 'jake.p@example.com'
+},
+
+{
+    name:'Mary',
+    email: 'mary.p@example.com'
+},
+
+{
+    name:'Vova',
+    email: 'vova.p@example.com'
+}
+];
+
+
 - methods: push (add to the end value and returns length), length (arrays size), pop (delete last und returns its value), shift (delete first und returns value), etc
   
 - view some object property from Array:
