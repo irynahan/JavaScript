@@ -208,7 +208,17 @@ pm.test("Error message", () => {
     pm.expect(resp.error).to.contain("Invalid value");
 })
 
+6) const resp = pm.response.json();
 
+pm.test("Created order is in the list", () => {
+    let lastOrderId = pm.collectionVariables.get("lastOrderId");
+    let isOrderIdInResponse = false;
+    for (let i = 0; i < resp.length; i++){
+        if (resp[i].id === lastOrderId){
+        isOrderIdInResponse = true}
+    }
+    pm.expect(isOrderIdInResponse).to.be.true;
+})
 
 
 
