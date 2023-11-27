@@ -120,11 +120,23 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 
 - for loop for Array:
   let number = [1,3,5,7,9]
-
   for (let i = 0; i<number.length; i++){
      console.log(number[i]);
   }
+
+- forEach:
+  pm.test("Created order is in the list", () => {
+    let lastOrderId = pm.collectionVariables.get("lastOrderId");
+    let isOrderIdInResponse = false;
+    resp.forEach((order) => {
+        if (order.id === lastOrderId){
+        isOrderIdInResponse = true}
+    });
+    pm.expect(isOrderIdInResponse).to.be.true;
+})
+  
 - methods: push (add to the end value and returns length), length (arrays size), pop (delete last und returns its value), shift (delete first und returns value), etc
+  
 - view some object property from Array:
    - console.log(person1.socialProfiles[1].name)
    const person1 = {
