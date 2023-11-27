@@ -104,6 +104,22 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 4) callback functions:
    https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 
+5) function for Array with forEach and if clause:
+
+function findSeniorEmployees(employees, currentYear) {
+    
+    let seniorEmployees = [];
+    
+    employees.forEach((employee) => {
+        if(currentYear - employee.yearOfEmployment >= 10 && employee.isActive === true ){
+            seniorEmployees.push(employee);
+        }
+    }
+    );
+    
+	return seniorEmployees;
+}
+
 # Object in JavaScript
 
 1) create object:
