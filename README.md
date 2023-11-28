@@ -66,13 +66,18 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 
 })
 
-# Getting variables in script
+6) Getting variables in script
   -  pm.collectionVariables.get('productId')
   -  use in test:
      pm.test('Correct product were retrieved', () => {
     const requestedProductId = pm.collectionVariables.get('productId')
     pm.expect(resp.id).equal(requestedProductId);
 });
+
+7) Delete environmental variables in script:
+   - pm.collectionVariables.unset('productId') // delete one variable in parentheses;
+   - pm.collectionVariables.clear() // will delete ALL environmental variables;
+
 
 # Text template and concatination
 
