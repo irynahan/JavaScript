@@ -46,7 +46,8 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
   
 5) Setting Postman variables from scripts:
 
-   - pm.collectionVariables.set('key', value);
+   - pm.collectionVariables.set('name', value);
+   - to retrieve type of variable console.log(typeof resp);  returns resp is 'object'
    - to set a collections property we have to be sure, that it has an expected value:
      
    pm.test('At list one product ID exists', () => {
