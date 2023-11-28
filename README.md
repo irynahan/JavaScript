@@ -227,7 +227,14 @@ function findSeniorEmployees(employees, currentYear) {
     }
 ]
 
-   
+# Pre-Request script
+
+- random value between min and max (math.random [0:1)) 
+function getRandomNumber (minValue, maxValue) {
+    return Math.floor(Math.random()* (maxValue - minValue) + minValue);
+}
+pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
+
 
 # Tests in Postman
 
