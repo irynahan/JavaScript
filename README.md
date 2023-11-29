@@ -240,6 +240,11 @@ function getRandomNumber (minValue, maxValue) {
 }
 pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
+# Environments in Postman
+
+- one can not change an environment from the script;
+- environmental variables overwrite collection variables (have a priority)
+- with if clause one can include/exclude tests execution for different environments (pm.environment.name)
 
 # Tests in Postman
 
