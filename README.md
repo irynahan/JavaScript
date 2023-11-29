@@ -244,7 +244,12 @@ pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
 - one can not change an environment from the script;
 - environmental variables overwrite collection variables (have a priority)
-- with if clause one can include/exclude tests execution for different environments (pm.environment.name)
+- with if clause one can include/exclude tests execution for different environments if (pm.environment.name === 'Testing') {}
+- to set environmental variables: pm.environment.set("var_name", value)
+- to get environmental variables: pm.environment.get("var_name")
+- to delete an environmental variable: pm.environment.unset("var_name")
+- to delete ALL environmental variables pm.environment.clear()
+
 
 # Tests in Postman
 
