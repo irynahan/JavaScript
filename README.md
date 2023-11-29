@@ -66,7 +66,7 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 
 })
 
-6) Getting variables in script
+6) Getting collection variables in script
   -  pm.collectionVariables.get('productId')
   -  use in test:
      pm.test('Correct product were retrieved', () => {
@@ -74,10 +74,22 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
     pm.expect(resp.id).equal(requestedProductId);
 });
 
-7) Delete environmental variables in script:
+7) Delete collection variables in script:
    - pm.collectionVariables.unset('productId') // delete one variable in parentheses;
    - pm.collectionVariables.clear() // will delete ALL environmental variables;
 
+# Environments in Postman
+
+- one can not change an environment from the script;
+- environmental variables overwrite collection variables (have a priority)
+- with if clause one can include/exclude tests execution for different environments if (pm.environment.name === 'Testing') {}
+- to set environmental variables: pm.environment.set("var_name", value)
+- to get environmental variables: pm.environment.get("var_name")
+- to delete an environmental variable: pm.environment.unset("var_name")
+- to delete ALL environmental variables pm.environment.clear()
+
+# Getting variables in script according to the current scope (collection, environment)
+- pm.variables.get('var_name')
 
 # Text template and concatination
 
@@ -240,15 +252,6 @@ function getRandomNumber (minValue, maxValue) {
 }
 pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
-# Environments in Postman
-
-- one can not change an environment from the script;
-- environmental variables overwrite collection variables (have a priority)
-- with if clause one can include/exclude tests execution for different environments if (pm.environment.name === 'Testing') {}
-- to set environmental variables: pm.environment.set("var_name", value)
-- to get environmental variables: pm.environment.get("var_name")
-- to delete an environmental variable: pm.environment.unset("var_name")
-- to delete ALL environmental variables pm.environment.clear()
 
 
 # Tests in Postman
