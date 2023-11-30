@@ -91,6 +91,13 @@ https://www.w3schools.com/jsref/jsref_number_nan.asp
 # Getting variables in script according to the current scope (collection, environment)
 - pm.variables.get('var_name')
 
+# Global variables
+- global variables  are accessible throughout the workspace and have the broadest scope in Postman.
+  They can be used anywhere among multiple requests and collections within the workspace.
+- pm.globals.get(“variable_key”)
+- pm.globals.set(“variable_key”, “variable_value”);
+- pm.globals.unset(“variable_key”)
+
 # Text template and concatination
 
    - fullName = firstName + lastName;
