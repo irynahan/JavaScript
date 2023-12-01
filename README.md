@@ -196,6 +196,9 @@ function findSeniorEmployees(employees, currentYear) {
 }
 ];
 
+ - transforming an Array with map() function:
+   const array2 = array1.map(x => x*2);
+   const newArray = person.map( person => person.email) hier wir receiving new array of emails wich are generated from person object of first array with map();
 
 - methods: push (add to the end value and returns length), length (arrays size), pop (delete last und returns its value), shift (delete first und returns value), etc
   
