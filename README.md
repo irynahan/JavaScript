@@ -293,9 +293,12 @@ pm.test("Error message", () => {
     pm.expect(resp.error).to.contain("Invalid value");
 })
 
-6) const resp = pm.response.json();
+6) Wenn 'const resp' is defined as global variable and by running a request there is no query variable we receive an error and all tests are not done, weil there is no json in response. To receive status code test excecuted, we can du in this way: 
+  
+const resp;
 
 pm.test("Created order is in the list", () => {
+    resp = pm.response.json();
     let lastOrderId = pm.collectionVariables.get("lastOrderId");
     let isOrderIdInResponse = false;
     for (let i = 0; i < resp.length; i++){
