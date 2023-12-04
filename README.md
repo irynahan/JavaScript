@@ -266,7 +266,7 @@ pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
 # Tests in Postman
 
-# Chai Assertion Library
+## Chai Assertion Library
 	https://www.chaijs.com/api/bdd/
 
 1) m.test("Status code is 200", function () {
