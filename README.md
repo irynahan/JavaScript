@@ -263,11 +263,10 @@ function getRandomNumber (minValue, maxValue) {
 pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
 
+# Chai Assertion Library
+	https://www.chaijs.com/api/bdd/
 
 # Tests in Postman
-
-## Chai Assertion Library
-	https://www.chaijs.com/api/bdd/
 
 1) m.test("Status code is 200", function () {
     pm.response.to.have.status(200);
