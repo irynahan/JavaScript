@@ -3,7 +3,11 @@
 JavaScript basics to write tests in Postman
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
 https://www.w3schools.com/jsref/jsref_number_nan.asp
+
+comparison and logical operators in Java script: https://www.w3schools.com/js/js_comparisons.asp
+
 /*     */ comment
 
 # Console
