@@ -267,6 +267,18 @@ pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 	https://www.chaijs.com/api/bdd/
 
  - to compare 2 diff objects we use eql assertion, because of equal will compare if both are the same object, but they are different (equal ===)
+ - pm.expect().to.be.not.eql()
+ - pm.expect().to.be.true;
+ - pm.expect().to.be.null;
+ - pm.expect().to.be.undefined;
+ - pm.expect([]).to.be.empty;
+ - pm.expect(2).to.be.oneOf([1,2,3]);
+ - pm.expect(2).to.be.within(1, 10);
+ - pm.expect([1,2,3]).to.include(2);
+ - pm.expect([1,2,3]).to.have.lengthOf(3);
+ - pm.expect('Some song').to.match(/^Some/); regular expressions
+ - instanceof, .property, .string, .keys, .ordered, .any, .all,  
+
 
 # Tests in Postman
 
