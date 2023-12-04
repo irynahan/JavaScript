@@ -277,7 +277,9 @@ pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
  - pm.expect([1,2,3]).to.include(2);
  - pm.expect([1,2,3]).to.have.lengthOf(3);
  - pm.expect('Some song').to.match(/^Some/); regular expressions
- - instanceof, .property, .string, .keys, .ordered, .any, .all,  
+ - instanceof, .property, .string, .keys, .ordered, .any, .all
+ - pm.expect(resp).to.be.an('array')
+ - pm.expect(resp).to.be.an('object')
 
 
 # Tests in Postman
