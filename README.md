@@ -163,9 +163,16 @@ function findSeniorEmployees(employees, currentYear) {
    };
 3) to view object console.log(person), view some object property : console.log(person.age)
 4) in Java script you can add a property to a constant object
-5) to iterate through the JavaScript object, when there is a not constant key value(it can be changed):
+5) to iterate through the JavaScript object, when there is a not constant key value(it can be changed - MockResponseBody-Check Nested Value):
     for (let key in response){
         console.log(key, response[key]);
+    };
+   let boardsStatus;
+    for (let key in resp.limits){
+        console.log(key, resp.limits[key]);
+        if(resp.limits[key].hasOwnProperty('boards')){
+            boardsStatus = resp.limits[key].boards.totalPerMember.status;
+        };
     };
    
 # Arrays []
