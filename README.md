@@ -161,9 +161,10 @@ function findSeniorEmployees(employees, currentYear) {
       age: 23
       sayHello: functon () {return 'Hello, my name is  ' + this.firstName;}
    };
-3) to view object console.log(person), view some object property : console.log(person.age)
-4) in Java script you can add a property to a constant object
-5) to iterate through the JavaScript object, when there is a not constant key value(it can be changed - MockResponseBody-Check Nested Value):
+3) to view object console.log(person), view some object property : console.log(person.age);
+4) if property name(key) has a special characters,  it can be reached in following way: console.log(person.age["social-media"]);
+5) in Java script you can add a property to a constant object
+6) to iterate through the JavaScript object, when there is a not constant property/key value(it can be changed - MockResponseBody-Check Nested Value):
     for (let key in response){
         console.log(key, response[key]);
     };
