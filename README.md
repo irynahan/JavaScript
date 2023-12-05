@@ -1,14 +1,15 @@
 # JavaScript + Postman
 
-JavaScript basics to write tests in Postman
+JavaScript basics to write tests in Postman:
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 https://www.w3schools.com/jsref/jsref_number_nan.asp
 
-comparison and logical operators in Java script: https://www.w3schools.com/js/js_comparisons.asp
+# Comments
 
 /*     */ comment
+// and goes comment
 
 # Console
 
@@ -16,14 +17,17 @@ comparison and logical operators in Java script: https://www.w3schools.com/js/js
 - console.log('Text or Variable') to print info into a console;
 - case sensitive
   
-# Comments
+# Comparison and logical operators in Java script:
+
+https://www.w3schools.com/js/js_comparisons.asp
 === compare value and value type '20' === 20 , 20 === 20
-// and goes comment
+
 
 # Variables
 
 - case sensitive
 - CamleCase or SnakeCase
+- to retrieve type of variable console.log(typeof resp);  returns resp is 'object'
 
 1) ways to declare a variable:
 
@@ -51,7 +55,6 @@ comparison and logical operators in Java script: https://www.w3schools.com/js/js
 5) Setting Postman variables from scripts:
 
    - pm.collectionVariables.set('name', value);
-   - to retrieve type of variable console.log(typeof resp);  returns resp is 'object'
    - to set a collections property we have to be sure, that it has an expected value:
      
    pm.test('At list one product ID exists', () => {
@@ -160,6 +163,10 @@ function findSeniorEmployees(employees, currentYear) {
    };
 3) to view object console.log(person), view some object property : console.log(person.age)
 4) in Java script you can add a property to a constant object
+5) to iterate through the JavaScript object, when there is a not constant key value(it can be changed):
+    for (let key in response){
+        console.log(key, response[key]);
+    };
    
 # Arrays []
 
