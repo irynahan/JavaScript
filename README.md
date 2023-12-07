@@ -345,6 +345,14 @@ pm.test("Created order is in the list", () => {
     pm.expect(isOrderIdInResponse).to.be.true;
 })
 
+# Test headers
+- to access headers from response: pm.response.headers.get('nameOfProperty')
+- assertion for the header properties:
+  pm.test("Is header Date exists", () => {
+    pm.response.to.have.header('Date');
+    pm.expect(pm.response.headers.get('Date')).to.contain('07 Dec 2023');
+});
+
 
 
 
