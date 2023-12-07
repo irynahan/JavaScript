@@ -353,6 +353,12 @@ pm.test("Created order is in the list", () => {
     pm.expect(pm.response.headers.get('Date')).to.contain('07 Dec 2023');
 });
 
+# Test cookies
+- to access cookies from response: pm.cookies.get('sessionId')
+- assertion for the cookie properties:
+  pm.expect(pm.cookies.has('sessionId')).to.be.true;
+  pm.expect(pm.cookies.get('sessionId')).to.eql('ad3se3ss8sg7sg3');
+
 
 
 
