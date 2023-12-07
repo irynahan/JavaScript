@@ -284,6 +284,7 @@ pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
 # Chai Assertion Library
 	https://www.chaijs.com/api/bdd/
+ 	https://www.youtube.com/watch?v=NEO8RqnfYec
 
  - to compare 2 diff objects we use eql assertion, because of equal will compare if both are the same object, but they are different (equal ===)
  - pm.expect().to.be.not.eql()
@@ -299,7 +300,6 @@ pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
  - instanceof, .property, .string, .keys, .ordered, .any, .all
  - pm.expect(resp).to.be.an('array')
  - pm.expect(resp).to.be.an('object')
-
 
 # Tests in Postman
 
