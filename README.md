@@ -360,12 +360,17 @@ pm.test("Created order is in the list", () => {
   pm.expect(pm.cookies.get('sessionId')).to.eql('ad3se3ss8sg7sg3');
 
 # Run Tests On Continuous Integration Server
+1) Postman CLI
 - install Postman CLI in Windows PowerShell: https://learning.postman.com/docs/postman-cli/postman-cli-installation/#windows-installation
 - in Postman select Automate runs via CLI
 - generate API Key for the collection
 - in collection variables to persist all current to initial value
 - run collection in console 
-
+2) Newman
+  - install Node js https://nodejs.org/en/download
+  - install Newman https://github.com/postmanlabs/newman#installation
+  - in collection ... share -> viaAPI -> generate key -> copy link
+  - in console  neman run + link
 
 
 
