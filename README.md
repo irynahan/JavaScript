@@ -365,7 +365,7 @@ pm.test("Created order is in the list", () => {
 - in Postman select Automate runs via CLI
 - generate API Key for the collection
 - in collection variables to persist all current to initial value
-- run collection in console 
+- run collection in console : postman login + key, postman collection run + link
 2) Newman
   - install Node js https://nodejs.org/en/download
   - install Newman https://github.com/postmanlabs/newman#installation
