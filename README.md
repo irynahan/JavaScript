@@ -391,6 +391,7 @@ pm.test("Created order is in the list", () => {
     -> newman run  [link] -e [environment link] -r htmlextra
     -> report will be in a folder newman in the current directory, in console thereis no report more
     -> to have report in both places -r cli,htmlextra or -r 'cli,htmlextra'
+    -> to have env. variables in report --reporter-htmlextra-showEnvironmentData
 
 
 
