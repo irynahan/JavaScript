@@ -385,10 +385,6 @@ pm.test("Created order is in the list", () => {
   - in collection variables to persist all current to initial value
   - in console  newman run [link] or newman run [path to file], when a file contains special characters the entire file name should be put in ' '
   - to run a collection with a specific environment neman run [link] -e [environment link], -e https://api.postman.com/environments/[environmentID]?apikey=[key] 
-  - newman run https://api.postman.com/collections/19082248-9f0505b2-1d70-4119-86a4-af85507f1b53?access_key=PMAT-01HHCGHJVHRYBA4405S91PWDCE -e
-
-https://api.postman.com/environments/19082248-cdde1b1c-01c5-4d81-bd50-728b783ee06a?apikey=PMAK-657713b54b9bf237a6310ced-dce9847b3bf73d1ec3ff9a326428e99e68
-newman run https://api.postman.com/collections/19082248-9f0505b2-1d70-4119-86a4-af85507f1b53?access_key=PMAT-01HHCJVWQ9VN6D0ZT1D0M27FA1 -e https://api.postman.com/environments/19082248-cdde1b1c-01c5-4d81-bd50-728b783ee06a?apikey=PMAK-657713b54b9bf237a6310ced-dce9847b3bf73d1ec3ff9a326428e99e68
 
 - HTML report in Newman
     -> to install https://www.npmjs.com/package/newman-reporter-htmlextra
