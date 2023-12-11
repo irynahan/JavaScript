@@ -374,7 +374,9 @@ pm.test("Created order is in the list", () => {
   -> --bail  stop execution when a test fаils
   -> --env-var [env_var_name] = [env_var_value]  specifies environment variables via the command line
   ->  -i [folderID] or [requestID] runs only the specified folder/s  or request/s  from the collection using folder Id or Name (id is preferred)
-
+  ->  --ignore-redirects prevents the Postman CLI from automatically following 3XX redirect responses
+  ->  --insecure  disabled certificat validation SSL checks
+  ->  -- verbose provides more details about execution of request for debugging purposes
 2) Newman
   - install Node js https://nodejs.org/en/download
   - install Newman https://github.com/postmanlabs/newman#installation
