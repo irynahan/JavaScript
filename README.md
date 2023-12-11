@@ -373,6 +373,7 @@ pm.test("Created order is in the list", () => {
 - other CLI options https://learning.postman.com/docs/postman-cli/postman-cli-options/   :
   -> --bail  stop execution when a test fаils
   -> --env-var [env_var_name] = [env_var_value]  specifies environment variables via the command line
+  ->  -i [folderID] or [requestID] runs only the specified folder/s  or request/s  from the collection using folder Id or Name (id is preferred)
 
 2) Newman
   - install Node js https://nodejs.org/en/download
