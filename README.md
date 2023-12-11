@@ -369,6 +369,8 @@ pm.test("Created order is in the list", () => {
 - postman logout
 - run collection without login is possible with postman collection run + viaAPI link
 - running from file: export collection to json file and in console: postman collection run + path to file
+- to run a collection with a specific environment, one need to add an environmental ID (under Environments -> Info): postman collection run + collectionId -e environmental ID 
+
 2) Newman
   - install Node js https://nodejs.org/en/download
   - install Newman https://github.com/postmanlabs/newman#installation
