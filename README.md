@@ -365,11 +365,11 @@ pm.test("Created order is in the list", () => {
 - in Postman select Automate runs via CLI
 - generate API Key for the collection
 - in collection variables to persist all current to initial value
-- run collection in console : postman login + key, postman collection run + collectionId
+- run collection in console : postman login [key], postman collection run [collectionId]
 - postman logout
-- run collection without login is possible with postman collection run + viaAPI link
+- run collection without login is possible with postman collection run [viaAPI link]
 - running from file: export collection to json file and in console: postman collection run + path to file
-- to run a collection with a specific environment, one need to add an environmental ID (under Environments -> Info): postman collection run + collectionId -e environmental ID
+- to run a collection with a specific environment, one need to add an environmental ID (under Environments -> Info): postman collection run [collectionId ]-e [environmental ID]
 - other CLI options https://learning.postman.com/docs/postman-cli/postman-cli-options/   :
   -> --bail  stop execution when a test fаils
   -> --env-var [env_var_name] = [env_var_value]  specifies environment variables via the command line
@@ -377,12 +377,24 @@ pm.test("Created order is in the list", () => {
   ->  --ignore-redirects prevents the Postman CLI from automatically following 3XX redirect responses
   ->  --insecure  disabled certificat validation SSL checks
   ->  -- verbose provides more details about execution of request for debugging purposes
+  
 2) Newman
   - install Node js https://nodejs.org/en/download
   - install Newman https://github.com/postmanlabs/newman#installation
-  - in collection ... share -> viaAPI -> generate key -> copy link
-  - in console  neman run + link
+  - in collection ... share -> viaAPI -> generate key (manage account-> API keys) -> copy link
+  - in collection variables to persist all current to initial value
+  - in console  newman run [link] or newman run [path to file], when a file contains special characters the entire file name should be put in ' '
+  - to run a collection with a specific environment neman run [link] -e [environment link], -e https://api.postman.com/environments/[environmentID]?apikey=[key] 
+  - newman run https://api.postman.com/collections/19082248-9f0505b2-1d70-4119-86a4-af85507f1b53?access_key=PMAT-01HHCGHJVHRYBA4405S91PWDCE -e
 
+https://api.postman.com/environments/19082248-cdde1b1c-01c5-4d81-bd50-728b783ee06a?apikey=PMAK-657713b54b9bf237a6310ced-dce9847b3bf73d1ec3ff9a326428e99e68
+newman run https://api.postman.com/collections/19082248-9f0505b2-1d70-4119-86a4-af85507f1b53?access_key=PMAT-01HHCJVWQ9VN6D0ZT1D0M27FA1 -e https://api.postman.com/environments/19082248-cdde1b1c-01c5-4d81-bd50-728b783ee06a?apikey=PMAK-657713b54b9bf237a6310ced-dce9847b3bf73d1ec3ff9a326428e99e68
+
+- HTML report in Newman
+    -> to install https://www.npmjs.com/package/newman-reporter-htmlextra
+    -> newman run  [link] -e [environment link] -r htmlextra
+    -> report will be in a folder newman in the current directory, in console thereis no report more
+    -> to have report in both places -r cli,htmlextra or -r 'cli,htmlextra'
 
 
 
