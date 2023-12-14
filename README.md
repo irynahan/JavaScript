@@ -384,7 +384,8 @@ pm.test("Created order is in the list", () => {
   - in collection ... share -> viaAPI -> generate key (manage account-> API keys) -> copy link
   - in collection variables to persist all current to initial value
   - in console  newman run [link] or newman run [path to file], when a file contains special characters the entire file name should be put in ' '
-  - to run a collection with a specific environment neman run [link] -e [environment link], -e https://api.postman.com/environments/[environmentID]?apikey=[key] 
+  - to run a collection with a specific environment neman run [link] -e [environment link], -e https://api.postman.com/environments/[environmentID]?apikey=[key]
+  - Neman command line options  https://github.com/postmanlabs/newman#command-line-options
 
 - HTML report in Newman
     -> to install https://www.npmjs.com/package/newman-reporter-htmlextra
@@ -392,6 +393,11 @@ pm.test("Created order is in the list", () => {
     -> report will be in a folder newman in the current directory, in console thereis no report more
     -> to have report in both places -r cli,htmlextra or -r 'cli,htmlextra'
     -> to have env. variables in report --reporter-htmlextra-showEnvironmentData
+
+- JUnit XML report in Newman: newman run  [link] -e [environment link] -r cli,junit
+  https://github.com/postmanlabs/newman?tab=readme-ov-file#junitxml-reporter
+
+- other Newman config options: --bail, --env--var, --folder, --verbose -> https://www.npmjs.com/search?ranking=popularity&q=newman-reporter-
 
 
 
