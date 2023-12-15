@@ -404,9 +404,21 @@ pm.test("Created order is in the list", () => {
 - install Docker Desktop https://www.docker.com/products/docker-desktop/
 - in cmd to run Jenkins in a container: docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home --env JAVA_OPTS="-Dfile.encoding=UTF8" vdespa/jenkins-postman (to stop Jenkins ctrl+c)
 - there is a pass in log, localhost 8080
-- create a Job with freestyle project, in build check postmanCLI/newman installation and run as usually.
+- 
+- create a Job with freestyle project:
+  in build check postmanCLI/newman installation and run as usually.
   It is a good practice to hide a keys with Dashbord -> Manage Jenkins -> Manage Credentials -> Global Credentials -> add -> Secret Text -> key and ID name for key.
   In Job configure build environment with use secret text, give variable name and with $ add to run command $POSTMAN_API_KEY
+  
+- create Job with Jenkinsfile(pipeline):
+  to configure Pipeline, go to Postman -> run on ci/cd -> check collection name, environment, ci/cd provider, operating system for CI/CD, copy code and
+  add an environment variable, delete unnecessary installations
+  to configure Pipeline with newman, one can use the same template as for postman CLI
+  
+  
+  
+  
+  
 
 
 
