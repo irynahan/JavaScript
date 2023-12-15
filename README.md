@@ -416,8 +416,8 @@ pm.test("Created order is in the list", () => {
   to configure Pipeline with newman, one can use the same template as for postman CLI
 
   to receive a HTTP report one should add:
-  -  to the file command --reporter-htmlextra-export newman/report.html
-  -  Manage Jenkins -> Plugins -> install HTML plugin
+  -  to the file command --reporters cli,htmlextra --reporter-htmlextra-export newman/report.html 
+  -  Manage Jenkins -> Plugins -> install HTML plugin and Script Console 
   -    post {
         always {
             publishHTML target: [
@@ -432,6 +432,8 @@ pm.test("Created order is in the list", () => {
         }
     }
 
+to receive a HTTP report one should add:
+  -  to the file command --reporters cli,junit --reporter-junit-export newman/report.xml
 
 
      
