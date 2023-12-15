@@ -434,6 +434,7 @@ pm.test("Created order is in the list", () => {
 
 to receive a HTTP report one should add:
   -  to the file command --reporters cli,junit --reporter-junit-export newman/report.xml
+  -  to the post actions junit 'newman/report.xml'
 
 
      
