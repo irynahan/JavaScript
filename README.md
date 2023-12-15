@@ -399,6 +399,17 @@ pm.test("Created order is in the list", () => {
 
 - other Newman config options: --bail, --env--var, --folder, --verbose -> https://www.npmjs.com/search?ranking=popularity&q=newman-reporter-
 
+# Postman Tests run with Jenkins
+
+- install Docker Desktop https://www.docker.com/products/docker-desktop/
+- in cmd to run Jenkins in a container: docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home --env JAVA_OPTS="-Dfile.encoding=UTF8" vdespa/jenkins-postman (to stop Jenkins ctrl+c)
+- there is a pass in log, localhost 8080
+- create a Job with freestyle project, in build check postmanCLI/newman installation and run as usually.
+  It is a good practice to hide a keys with Dashbord -> Manage Jenkins -> Manage Credentials -> Global Credentials -> add -> Secret Text -> key and ID name for key.
+  In Job configure build environment with use secret text, give variable name and with $ add to run command $POSTMAN_API_KEY
+
+
+
 
 
 
