@@ -414,15 +414,23 @@ pm.test("Created order is in the list", () => {
   to configure Pipeline, go to Postman -> run on ci/cd -> check collection name, environment, ci/cd provider, operating system for CI/CD, copy code and
   add an environment variable, delete unnecessary installations
   to configure Pipeline with newman, one can use the same template as for postman CLI
-  
-  
-  
-  
-  
 
-
-
-
+  to receive a HTTP report one should add:
+  -  to the file command --reporter-htmlextra-export newman/report.html
+  -  Manage Jenkins -> Plugins -> install HTML plugin
+  -    post {
+        always {
+            publishHTML target: [
+                reportName: 'Newman',
+                reportDir: 'newman',
+                reportFiles: 'report.html',
+                reportTitles: 'Postman API tests',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: false
+            ]
+        }
+    }
 
 
 
