@@ -360,9 +360,9 @@ pm.test("Created order is in the list", () => {
   pm.expect(pm.cookies.get('sessionId')).to.eql('ad3se3ss8sg7sg3');
 
 # Test Workflows
-- to set an execution order it is needed to add in Tests the script:   pm.setNextRequest("Request_Name"), Request ID can be used instead the Request name (pm.info.requestName, pm.info.requestID)
-- the order , in which pm.setNextRequest("Request_Name") script is placed is not important, it is executed at the end
-- to stop a workflow execution:  pm.setNextRequest(null) otherwise it can lead to infinity loop
+- to set an execution order it is needed to add in Tests the script:   postman.setNextRequest("Request_Name"), Request ID can be used instead the Request name (pm.info.requestName, pm.info.requestID)
+- the order , in which postman.setNextRequest("Request_Name") script is placed is not important, it is executed at the end
+- to stop a workflow execution:  postman.setNextRequest(null) otherwise it can lead to infinity loop
 - to set one test execution max X times, it is possible to set a variable, which contains a number of request runs and check it with If-clause
   
 
