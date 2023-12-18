@@ -415,7 +415,7 @@ pm.test("Created order is in the list", () => {
   add an environment variable, delete unnecessary installations
   to configure Pipeline with newman, one can use the same template as for postman CLI
 
-  to receive a HTTP report one should add:
+  to receive a HTTP report with Jenkinsfile one should add:
   -  to the file command --reporters cli,htmlextra --reporter-htmlextra-export newman/report.html 
   -  Manage Jenkins -> Plugins -> install HTML plugin and Script Console 
   -    post {
@@ -432,9 +432,9 @@ pm.test("Created order is in the list", () => {
         }
     }
 
-to receive a HTTP report one should add:
-  -  to the file command --reporters cli,junit --reporter-junit-export newman/report.xml
-  -  to the post actions junit 'newman/report.xml'
+ - freestyle project: to receive a HTTP report:
+	  -  to the file command --reporters cli,junit --reporter-junit-export newman/report.xml
+	  -  to the post actions junit 'newman/report.xml'
 
 
      
