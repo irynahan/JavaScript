@@ -359,6 +359,11 @@ pm.test("Created order is in the list", () => {
   pm.expect(pm.cookies.has('sessionId')).to.be.true;
   pm.expect(pm.cookies.get('sessionId')).to.eql('ad3se3ss8sg7sg3');
 
+# Test Workflows
+- to set an execution order it is needed to add in Tests the script:   pm.setNextRequest("Request_Name")
+- to stop a workflow execution:  pm.setNextRequest(null) otherwise it can lead to infinity loop
+  
+
 # Run Tests On Continuous Integration Server
 1) Postman CLI
 - install Postman CLI in Windows PowerShell: https://learning.postman.com/docs/postman-cli/postman-cli-installation/#windows-installation
