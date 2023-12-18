@@ -432,7 +432,7 @@ pm.test("Created order is in the list", () => {
         }
     }
 
- - freestyle project: to receive a HTTP report:
+ - freestyle project: to receive a XML report:
 	  -  to the file command --reporters cli,junit --reporter-junit-export newman/report.xml
 	  -  to the post actions junit 'newman/report.xml'
 
