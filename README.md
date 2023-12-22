@@ -105,6 +105,9 @@ https://www.w3schools.com/js/js_comparisons.asp
 - pm.globals.set(“variable_key”, “variable_value”);
 - pm.globals.unset(“variable_key”)
 
+# Variable scopes 
+- local -> data -> environment -> collection -> global (left has a priority for right)
+
 # Text template and concatination
 
    - fullName = firstName + lastName;
