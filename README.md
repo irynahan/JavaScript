@@ -96,7 +96,7 @@ https://www.w3schools.com/js/js_comparisons.asp
 - to delete ALL environmental variables pm.environment.clear()
 
 # Getting variables in script according to the current scope (collection, environment)
-- pm.variables.get('var_name')
+- pm.variables.get('var_name') scope getter 
 
 # Global variables
 - global variables  are accessible throughout the workspace and have the broadest scope in Postman.
@@ -369,11 +369,15 @@ pm.test("Created order is in the list", () => {
 - to set one test execution max X times, it is possible to set a variable, which contains a number of request runs and check it with If-clause
 
 # Data Driven Tests
-- using external data files
+- using external data files:
+  -> json, csv files
+  -> to provide a data for request from the file,one has to put "key" from file as a "value" {{key}} within "{{key}}" for text values in a script
+  -> there is a script to make accertion of request data with data form file pm.iterationData.get("key")
+  -> expected values can be added to a json, csv file for further accertion
+  -> if invalid data are provided, with if clause for valid and invalid cases one can avoid test fails
+  -> in order to run tests with data from file and if there is not file with collection var, one can use a variables scope and to make a collection variables with some values and in script we have to get values from the scope pm.variables.get("")
+  
 - using pre-request scripts, variables and workflows
-  	
-  
-  
 
 # Run Tests On Continuous Integration Server
 1) Postman CLI
