@@ -456,11 +456,17 @@ pm.test("Created order is in the list", () => {
 	  -  to the file command --reporters cli,junit --reporter-junit-export newman/report.xml
 	  -  to the post actions junit 'newman/report.xml'
   
-# Using Git to version collections
+# Using Git/GitHub to version collections
 - git can be used to obtain a history of changes into the collections and go to the previous versions
 - git helps to organize a team collaboration
 - code review is possible
 - data is stored locally
+- to use GitHub:
+  -> create repository
+  -> make git clone
+  -> export collection from Postman
+  -> commit the file and push changes
+  -> to take somebody changes to pull changes and to import file to Postman
 
 
 
