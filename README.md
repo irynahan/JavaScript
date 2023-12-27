@@ -405,6 +405,10 @@ pm.test("Created order is in the list", () => {
   - in collection variables to persist all current to initial value
   - in console  newman run [link] or newman run [path to file], when a file contains special characters the entire file name should be put in ' '
   - to run a collection with a specific environment neman run [link] -e [environment link], -e https://api.postman.com/environments/[environmentID]?apikey=[key]
+  - to run a collection with uploading file in Newman, it is needed in collection.json body->formdata->"value" to substitute with "src":"file_name.file_type" newman run
+  - to upload multiple files, it is possible to make a csv file with all files and in "src":"{{fileName}}" (column name in csv file) neman run collection_name.json --iteration-data data.scv
+
+     
   - Neman command line options  https://github.com/postmanlabs/newman#command-line-options
 
 - HTML report in Newman
@@ -424,7 +428,6 @@ pm.test("Created order is in the list", () => {
 - install Docker Desktop https://www.docker.com/products/docker-desktop/
 - in cmd to run Jenkins in a container: docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home --env JAVA_OPTS="-Dfile.encoding=UTF8" vdespa/jenkins-postman (to stop Jenkins ctrl+c)
 - there is a pass in log, localhost 8080
-- 
 - create a Job with freestyle project:
   in build check postmanCLI/newman installation and run as usually.
   It is a good practice to hide a keys with Dashbord -> Manage Jenkins -> Manage Credentials -> Global Credentials -> add -> Secret Text -> key and ID name for key.
