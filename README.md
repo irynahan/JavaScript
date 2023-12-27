@@ -473,6 +473,14 @@ pm.test("Created order is in the list", () => {
 - invite via email or link team member
 - give individual user permissions to team members on the collection level
 
+# Mock Servers
+- it is server that simulates another servers response and is used for testing purposes
+- in Postman it is possible to make mocks collection with multiple examples
+- simulates headers, body, status code
+- mocks can be saved as example from a external API response
+https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/
+
+
 
 
 
