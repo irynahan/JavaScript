@@ -468,6 +468,13 @@ pm.test("Created order is in the list", () => {
   -> commit the file and push changes
   -> to take somebody changes to pull changes and to import file to Postman
 
+# Team Workspaces
+- to organize team work create team workspace, team name, URL
+- invite via email or link team member
+- give individual user permissions to team members on the collection level
+
+
+
 
 
 
