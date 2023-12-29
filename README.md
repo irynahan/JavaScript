@@ -357,6 +357,11 @@ pm.test("Created order is in the list", () => {
     pm.expect(isOrderIdInResponse).to.be.true;
 })
 
+7) to reuse tests in multiple requests all tests can be saved in a environmental variable as a function:
+	- var commonTests = () => {pm.test()...};
+	- pm.environment.set("var_name", commonTests.toString());
+	- to run tests in the tab Tests of request run: eval(pm.environment.get("commonTests"))();
+
 # Test headers
 - to access headers from response: pm.response.headers.get('nameOfProperty')
 - assertion for the header properties:
