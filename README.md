@@ -108,6 +108,15 @@ https://www.w3schools.com/js/js_comparisons.asp
 # Variable scopes 
 - local -> data -> environment -> collection -> global (left has a priority for right)
 
+# Authentication
+-  Basic auth, simple method , username and password are sent as a header vaule and encoded with Base64
+-  OAuth2 appl getting user to auth server, hier user is authenticate and the appl becomes an auth code, with code the app requests at the auth server an access token
+   In Postman authorization-> OAuth2-> get new access token
+-  Form-Based auth - there is a web-form for auth. To parse a HTML and get the CSRF token under tests tab:
+   var responseHTML = cheerio(pm.response.text());
+   console.log(responseHTML.find('[value="1"]').attr('name'));
+- Json web Token bearer token
+
 # Text template and concatination
 
    - fullName = firstName + lastName;
