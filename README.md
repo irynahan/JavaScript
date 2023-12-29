@@ -293,6 +293,12 @@ function getRandomNumber (minValue, maxValue) {
 }
 pm.collectionVariables.set('randomProductQuantity', getRandomNumber(1, 12));
 
+- send request from a script and save some data as variable:
+    pm.sendRequest("link", function (error, response){
+  	const data = response.json();
+  	pm.globals.set("var_name", data.id)
+  })
+
 
 # Chai Assertion Library
 	https://www.chaijs.com/api/bdd/
