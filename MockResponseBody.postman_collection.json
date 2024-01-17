@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "b5b51c30-370f-4943-a7d7-41b10c627b65",
+		"name": "MockResponseBody",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19082248"
+	},
+	"item": [
+		{
+			"name": "Filter Array Response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const resp = pm.response.json();\r",
+							"\r",
+							"console.log(typeof resp);\r",
+							"\r",
+							"pm.test(\"Is manufacturer is allowed\", () => {\r",
+							"    let manufacturer = resp.filters.find((partner)=> partner.name  === \"MANUFACTURER\");\r",
+							"    console.log(manufacturer);\r",
+							"    pm.expect(manufacturer.isAllowed).to.be.false;\r",
+							"}\r",
+							");\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/afea7a15-1cf2-4d8b-8f76-a7ac8b52088e",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"afea7a15-1cf2-4d8b-8f76-a7ac8b52088e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Nested Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const resp = pm.response.json();\r",
+							"\r",
+							"console.log(typeof resp.prefs.comments);\r",
+							"\r",
+							"pm.test(\"Comment status should be disabled\", () => {\r",
+							"    pm.expect(resp.prefs.comments).to.be.an('object');\r",
+							"    pm.expect(resp.prefs.comments.status).to.equal(\"disabled\");\r",
+							"});\r",
+							"\r",
+							"// to iterate through the JavaScript object, when there is a not constant key value  f.ex. \"54bba24af6196bd5f824e563\"\r",
+							"pm.test(\"Is limit status ok\", () => {\r",
+							"    let boardsStatus;\r",
+							"    for (let key in resp.limits){\r",
+							"        console.log(key, resp.limits[key]);\r",
+							"        if(resp.limits[key].hasOwnProperty('boards')){\r",
+							"            boardsStatus = resp.limits[key].boards.totalPerMember.status;\r",
+							"        };\r",
+							"    };\r",
+							"    pm.expect(boardsStatus).to.equal('ok');\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/673be5a5-5211-4ba1-9287-6c3716e940bc",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"673be5a5-5211-4ba1-9287-6c3716e940bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Headers and Cookies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"const resp = pm.response.json();\r",
+							"\r",
+							"console.log(typeof resp.prefs.comments);\r",
+							"\r",
+							"pm.test(\"Comment status should be disabled\", () => {\r",
+							"    pm.expect(resp.prefs.comments).to.be.an('object');\r",
+							"    pm.expect(resp.prefs.comments.status).to.equal(\"disabled\");\r",
+							"});\r",
+							"\r",
+							"// to iterate through the JavaScript object, when there is a not constant key value  f.ex. \"54bba24af6196bd5f824e563\"\r",
+							"pm.test(\"Is limit status ok\", () => {\r",
+							"    for (let key in resp.limits){\r",
+							"        console.log(key, resp[key]);\r",
+							"        \r",
+							"    };\r",
+							"})\r",
+							"\r",
+							"// get header property\r",
+							"\r",
+							"console.log ( \"Headers value Date:\", (pm.response.headers.get('Date')));\r",
+							"console.log ( \"Headers value Sozu-Id:\", (pm.response.headers.get('Sozu-Id')));\r",
+							"\r",
+							"pm.test(\"Is header Date exists\", () => {\r",
+							"    pm.response.to.have.header('Date');\r",
+							"    pm.expect(pm.response.headers.get('Date')).to.contain('07 Dec 2023');\r",
+							"});\r",
+							"\r",
+							"// Cookie exists:\r",
+							"pm.expect(pm.cookies.has('sessionId')).to.be.true;\r",
+							"pm.expect(pm.cookies.get('sessionId')).to.eql('ad3se3ss8sg7sg3');\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/673be5a5-5211-4ba1-9287-6c3716e940bc",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"673be5a5-5211-4ba1-9287-6c3716e940bc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
